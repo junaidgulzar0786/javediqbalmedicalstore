@@ -2,7 +2,7 @@
 
 return [
 
-	'welcome' 			=> 'Welcome to TutaPOS - TUTA Point of Sale.',
+	'welcome' 			=> 'Welcome to Javed Medical Store - POS',
 	'statistics' 		=> 'Statistics',
 	'total_employees' 	=> 'Total Employees',
 	'total_customers' 	=> 'Total Customers',

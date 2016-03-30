@@ -75,8 +75,7 @@
 
 	<footer class="footer hidden-print">
       <div class="container">
-        <p class="text-muted">You are using <a href="http://goo.gl/YT23la">TutaPOS</a> v0.8-alpha by <a href="https://twitter.com/tutacare">Irfan Mahfudz Guntur</a>.
-        </p>
+        <p class="text-muted">Copyright &nbsp; &copy &nbsp; 2016</p>
       </div>
     </footer>
 	<!-- Scripts -->

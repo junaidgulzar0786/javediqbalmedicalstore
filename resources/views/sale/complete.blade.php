@@ -10,7 +10,7 @@ table td {
 <div class="container-fluid">
    <div class="row">
         <div class="col-md-12" style="text-align:center">
-            TutaPOS - Tuta Point of Sale           
+            Javed Iqbal Medical Store - Point of Sale           
         </div>
     </div>
     <div class="row">

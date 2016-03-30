@@ -29,7 +29,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="http://goo.gl/YT23la">TutaPOS</a>
+				<a class="navbar-brand" href="{{ url('/') }}">Javed Iqbal Medical Store</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

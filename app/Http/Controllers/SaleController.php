@@ -106,9 +106,9 @@ class SaleController extends Controller {
         $itemssale = SaleItem::where('sale_id', $saleItemsData->sale_id)->get();
             Session::flash('message', 'You have successfully added sales');
             //return Redirect::to('receivings');
-            echo "<pre>";
-            var_dump($saleItemsData,$sales,$itemssale);
-            exit;
+           //echo "<pre>";
+          // print_r($itemssale);
+           //exit;
             return view('sale.complete')
             	->with('sales', $sales)
             	->with('saleItemsData', $saleItemsData)

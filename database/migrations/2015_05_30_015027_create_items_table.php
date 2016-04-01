@@ -15,7 +15,7 @@ class CreateItemsTable extends Migration {
 		Schema::create('items', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('upc_ean_isbn',90);
+			$table->string('upc_ean_isbn',90)->unique();
 			$table->string('item_name',90);
 			$table->string('size',20);
 			$table->text('description');

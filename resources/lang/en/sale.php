@@ -22,9 +22,11 @@ return [
 	'submit' => 'Complete Sale',
 	//struk
 	'sale_id' => 'Sale ID',
+	'item_c' => 'Item C',
 	'item' => 'Item',
 	'price' => 'Price',
 	'qty' => 'Qty',
+	'dis' => 'Dis',
 	'print' => 'Print',
 	'new_sale' => 'New Sale',
 

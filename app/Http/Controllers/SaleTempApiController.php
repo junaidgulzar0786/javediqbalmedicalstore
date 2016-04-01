@@ -85,6 +85,7 @@ class SaleTempApiController extends Controller {
 	{
 		$SaleTemps = SaleTemp::find($id);
         $SaleTemps->quantity = Input::get('quantity');
+        $SaleTemps->discount = Input::get('discount');
         $SaleTemps->total_cost = Input::get('total_cost');
         $SaleTemps->total_selling = Input::get('total_selling');
         $SaleTemps->save();

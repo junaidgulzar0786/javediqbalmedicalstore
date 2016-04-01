@@ -9,6 +9,7 @@ return [
     'payment_type' => 'Tipo de Pago',
     'customer' => 'Cliente',
     'item_id' => 'ID',
+    'item_code' => 'Item Code';
     'item_name' => 'Producto',
     'price' => 'Precio',
     'quantity' => 'Cantidad',

@@ -22,12 +22,22 @@
         }
         $scope.updateSaleTemp = function(newsaletemp) {
             
-            $http.put('api/saletemp/' + newsaletemp.id, { quantity: newsaletemp.quantity, total_cost: newsaletemp.item.cost_price * newsaletemp.quantity,
+            $http.put('api/saletemp/' + newsaletemp.id, { quantity: newsaletemp.quantity,discount: newsaletemp.discount, total_cost: newsaletemp.item.cost_price * newsaletemp.quantity,
                 total_selling: newsaletemp.item.selling_price * newsaletemp.quantity }).
             success(function(data, status, headers, config) {
                 
                 });
         }
+
+        $scope.updateSaleTempDiscount = function(newsaletemp) {
+            
+            var costPriceDis = (newsaletemp.item.cost_price * newsaletemp.quantity) * ( newsaletemp.discount / 100 ) ;
+            $http.put('api/saletemp/' + newsaletemp.id, { quantity: newsaletemp.quantity,discount: newsaletemp.discount, total_cost: (newsaletemp.item.cost_price * newsaletemp.quantity) - costPriceDis ,
+                total_selling: (newsaletemp.item.selling_price * newsaletemp.quantity) - costPriceDis }).
+            success(function(data, status, headers, config) {
+                });
+        }
+
         $scope.removeSaleTemp = function(id) {
             $http.delete('api/saletemp/' + id).
             success(function(data, status, headers, config) {
@@ -39,7 +49,8 @@
         $scope.sum = function(list) {
             var total=0;
             angular.forEach(list , function(newsaletemp){
-                total+= parseFloat(newsaletemp.item.selling_price * newsaletemp.quantity);
+                var discount = (newsaletemp.item.selling_price * newsaletemp.quantity) * (newsaletemp.discount/100);
+                total+= parseFloat(newsaletemp.item.selling_price * newsaletemp.quantity)-discount;
             });
             return total;
         }

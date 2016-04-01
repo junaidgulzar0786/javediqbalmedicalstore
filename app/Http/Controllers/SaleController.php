@@ -65,6 +65,7 @@ class SaleController extends Controller {
 			$saleItemsData->cost_price = $value->cost_price;
 			$saleItemsData->selling_price = $value->selling_price;
 			$saleItemsData->quantity = $value->quantity;
+			$saleItemsData->discount = $value->discount;
 			$saleItemsData->total_cost = $value->total_cost;
 			$saleItemsData->total_selling = $value->total_selling;
 			$saleItemsData->save();
@@ -105,6 +106,9 @@ class SaleController extends Controller {
         $itemssale = SaleItem::where('sale_id', $saleItemsData->sale_id)->get();
             Session::flash('message', 'You have successfully added sales');
             //return Redirect::to('receivings');
+            echo "<pre>";
+            var_dump($saleItemsData,$sales,$itemssale);
+            exit;
             return view('sale.complete')
             	->with('sales', $sales)
             	->with('saleItemsData', $saleItemsData)

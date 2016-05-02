@@ -6,6 +6,7 @@ return [
 	'new_item'		=> 'New Item',
 	'item_id' 		=> 'Item ID',
 	'upc_ean_isbn'	=> 'UPC/EAN/ISBN',
+	'item_code'	=> 'Item Code',
 	'item_name' 	=> 'Item Name',
 	'size' 			=> 'Size',
 	'cost_price' 	=> 'Cost Price',

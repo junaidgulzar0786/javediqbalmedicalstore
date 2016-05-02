@@ -21,6 +21,11 @@
 					</div>
 
 					<div class="form-group">
+					{!! Form::label('item_code', trans('item.item_code').' *') !!}
+					{!! Form::text('item_code', Input::old('item_code'), array('class' => 'form-control')) !!}
+					</div>
+
+					<div class="form-group">
 					{!! Form::label('item_name', trans('item.item_name').' *') !!}
 					{!! Form::text('item_name', Input::old('item_name'), array('class' => 'form-control')) !!}
 					</div>

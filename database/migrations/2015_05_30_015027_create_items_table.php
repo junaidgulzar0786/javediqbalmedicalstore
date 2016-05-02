@@ -16,6 +16,7 @@ class CreateItemsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('upc_ean_isbn',90)->unique();
+			$table->string('item_code',90)->unique();
 			$table->string('item_name',90);
 			$table->string('size',20);
 			$table->text('description');

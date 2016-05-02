@@ -80,7 +80,8 @@
                             <tr ng-repeat="newsaletemp in saletemp">
                             <td>@{{newsaletemp.item_id}}</td>
                             <td>@{{newsaletemp.item.upc_ean_isbn}}</td>
-                            <td>@{{newsaletemp.item.item_name}}</td><td>@{{newsaletemp.item.selling_price | currency}}</td><td><input type="text" style="text-align:center" autocomplete="off" name="quantity" ng-change="updateSaleTemp(newsaletemp)" ng-model="newsaletemp.quantity" size="2"></td><td>@{{newsaletemp.item.selling_price * newsaletemp.quantity | currency}}</td>
+                            <td>@{{newsaletemp.item.item_name}}</td><td>@{{newsaletemp.item.selling_price | currency}}</td><td><input type="text" style="text-align:center" autocomplete="off" name="quantity" ng-change="updateSaleTemp(newsaletemp)" ng-model="newsaletemp.quantity" size="2"></td><td>@{{
+                            (newsaletemp.item.selling_price * newsaletemp.quantity) - (newsaletemp.item.selling_price * newsaletemp.quantity) * (newsaletemp.discount/100) | currency}}</td>
                             
                             <td><input type="text" style="text-align:center" autocomplete="off" name="discount" ng-change="updateSaleTempDiscount(newsaletemp)" ng-model="newsaletemp.discount" size="2"></td>
                             

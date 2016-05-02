@@ -46,6 +46,7 @@ class ItemController extends Controller {
 	{
 		    $items = new Item;
             $items->upc_ean_isbn = Input::get('upc_ean_isbn');
+            $items->item_code = Input::get('item_code');
             $items->item_name = Input::get('item_name');
             $items->size = Input::get('size');
             $items->description = Input::get('description');
@@ -128,6 +129,7 @@ class ItemController extends Controller {
 			$inventories->save();
 			// save update
             $items->upc_ean_isbn = Input::get('upc_ean_isbn');
+            $items->item_code = Input::get('item_code');
             $items->item_name = Input::get('item_name');
             $items->size = Input::get('size');
             $items->description = Input::get('description');

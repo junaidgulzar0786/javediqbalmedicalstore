@@ -12,6 +12,7 @@
             $scope.saletemp = data;
         });
         $scope.addSaleTemp = function(item, newsaletemp) {
+            
             $http.post('api/saletemp', { item_id: item.id, cost_price: item.cost_price, selling_price: item.selling_price }).
             success(function(data, status, headers, config) {
                 $scope.saletemp.push(data);
@@ -21,9 +22,9 @@
             });
         }
         $scope.updateSaleTemp = function(newsaletemp) {
-            
-            $http.put('api/saletemp/' + newsaletemp.id, { quantity: newsaletemp.quantity,discount: newsaletemp.discount, total_cost: newsaletemp.item.cost_price * newsaletemp.quantity,
-                total_selling: newsaletemp.item.selling_price * newsaletemp.quantity }).
+            var costPriceDis = (newsaletemp.item.cost_price * newsaletemp.quantity) * ( newsaletemp.discount / 100 ) ;
+            $http.put('api/saletemp/' + newsaletemp.id, { quantity: newsaletemp.quantity,discount: newsaletemp.discount, total_cost: (newsaletemp.item.cost_price * newsaletemp.quantity) - costPriceDis,
+                total_selling: (newsaletemp.item.selling_price * newsaletemp.quantity) - - costPriceDis }).
             success(function(data, status, headers, config) {
                 
                 });

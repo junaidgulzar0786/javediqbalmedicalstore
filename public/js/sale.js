@@ -2,12 +2,23 @@
     var app = angular.module('tutapos', [ ]);
 
     app.controller("SearchItemCtrl", [ '$scope', '$http', function($scope, $http) {
+        console.log($scope.add_payment);
         $scope.items = [ ];
         $http.get('api/item').success(function(data) {
             $scope.items = data;
         });
         $scope.saletemp = [ ];
         $scope.newsaletemp = { };
+        $scope.submitDisable = true;
+        $scope.addPaymentChange = function(){
+            console.log($scope.total_payment);
+            if($scope.add_payment > 0){
+                $scope.submitDisable = false;
+            }
+            else{
+                $scope.submitDisable = true;
+            }
+        }
         $http.get('api/saletemp').success(function(data, status, headers, config) {
             $scope.saletemp = data;
         });

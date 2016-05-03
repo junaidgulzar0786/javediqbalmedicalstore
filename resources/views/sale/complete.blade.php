@@ -38,7 +38,7 @@ table td {
                     <td>{{$value->item->upc_ean_isbn}}</td>
                     <td>{{$value->selling_price}}</td>
                     <td>{{$value->quantity}}</td>
-                    <td>{{$value->discount}}</td>
+                    <td>{{$value->discount}} %</td>
                     <td>{{$value->total_selling}}</td>
                 </tr>
                 @endforeach

@@ -11,6 +11,7 @@ return [
 	'item_id' => 'Item ID',
 	'item_code' => 'Item Code',
 	'item_name' => 'Item Name',
+	'item_desc' => 'Item Description',
 	'price' => 'Price',
 	'quantity' => 'Quantity',
 	'discount'=>'Discount',

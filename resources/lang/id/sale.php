@@ -9,7 +9,9 @@ return [
 	'payment_type' => 'Jenis Pembayaran',
 	'customer' => 'Pelanggan',
 	'item_id' => 'ID Barang',
+	'item_code' => 'Item Code',
 	'item_name' => 'Nama Barang',
+	'item_desc' => 'Item Description',
 	'price' => 'Harga',
 	'quantity' => 'Quantity',
 	'total' => 'Total',
@@ -23,6 +25,7 @@ return [
 	'item' => 'Barang',
 	'price' => 'Harga',
 	'qty' => 'Qty',
+	'dis' => 'Dis',
 	'print' => 'Cetak',
 	'new_sale' => 'Penjualan Baru',
 

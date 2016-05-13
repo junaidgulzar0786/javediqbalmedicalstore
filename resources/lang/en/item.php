@@ -23,6 +23,7 @@ return [
 	//inventory
 	'inventory_data_tracking' => 'Inventory Data Tracking',
 	'current_quantity' => 'Current Quantity',
+	'total_quantity' => 'Total Quantity',
 	'inventory_to_add_subtract' => 'Inventory to add/subtract',
 	'comments' => 'Comments',
 	'employee' => 'Employee',

@@ -23,7 +23,7 @@
 
                         <table class="table table-hover">
                         <tr ng-repeat="item in items  | filter: searchKeyword | limitTo:10">
-                        <td>@{{item.upc_ean_isbn}}</td>
+                        <td>@{{item.item_code}}</td>
                         <td>@{{item.item_name}}</td>
                         <td><button class="btn btn-success btn-xs" type="button" ng-click="addSaleTemp(item, newsaletemp)"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></button></td>
 
@@ -83,15 +83,15 @@
                             <th>&nbsp;</th></tr>
                             <tr ng-repeat="newsaletemp in saletemp">
                             <!--<td>@{{newsaletemp.item_id}}</td>-->
-                            <td>@{{newsaletemp.item.upc_ean_isbn}}</td>
+                            <td>@{{newsaletemp.item.item_code}}</td>
                             <td>@{{newsaletemp.item.item_name}}</td>
                             <td>@{{newsaletemp.item.description}}</td>
-                            <td>@{{newsaletemp.item.selling_price | currency}}</td>
+                            <td>@{{newsaletemp.item.selling_price | currency:'PKR '}}</td>
                             <td><input type="text" style="text-align:center" autocomplete="off" name="quantity" ng-change="updateSaleTemp(newsaletemp)" ng-model="newsaletemp.quantity" size="2"></td>
                             <td>@{{
-                            (newsaletemp.item.selling_price * newsaletemp.quantity) - (newsaletemp.item.selling_price * newsaletemp.quantity) * (newsaletemp.discount/100) }}</td>
+                            (newsaletemp.item.selling_price * newsaletemp.quantity) - (newsaletemp.item.selling_price * newsaletemp.quantity) * (newsaletemp.discount/100) | currency:'PKR ' }}</td>
                             
-                            <td><input type="text" style="text-align:center" autocomplete="off" name="discount" ng-change="updateSaleTempDiscount(newsaletemp)" ng-model="newsaletemp.discount" size="2"></td>
+                            <td><input type="number" style="text-align:center" autocomplete="off" name="discount" ng-change="updateSaleTempDiscount(newsaletemp)" ng-model="newsaletemp.discount" size="2"></td>
                             
                             <td><button class="btn btn-danger btn-xs" type="button" ng-click="removeSaleTemp(newsaletemp.id)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
                             </tr>

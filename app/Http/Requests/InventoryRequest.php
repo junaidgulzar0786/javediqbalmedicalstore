@@ -21,9 +21,9 @@ class InventoryRequest extends Request {
 	 */
 	public function rules()
 	{
-		return [
-			'in_out_qty' => 'required',
-		];
+		//return [
+		//	'in_out_qty' => 'required',
+		//];
 	}
 
 }

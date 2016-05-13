@@ -47,6 +47,8 @@ Route::group(['middleware' => 'languange'], function()
 	Route::resource('api/receivingtemp', 'ReceivingTempApiController');
 
 	Route::resource('api/saletemp', 'SaleTempApiController');
+	Route::resource('api/item-batch', 'ItemController@getInventoryByItemId');
+	Route::resource('api/item-inventory-destroy', 'ItemController@destroyInventoryById');
 
 	Route::resource('api/itemkittemp', 'ItemKitController');
 	Route::get('api/item-kit-temp', 'ItemKitController@itemKitApi');

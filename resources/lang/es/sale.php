@@ -9,7 +9,8 @@ return [
     'payment_type' => 'Tipo de Pago',
     'customer' => 'Cliente',
     'item_id' => 'ID',
-    'item_code' => 'Item Code';
+    'item_code' => 'Item Code',
+    'item_desc' => 'Item Description',
     'item_name' => 'Producto',
     'price' => 'Precio',
     'quantity' => 'Cantidad',
@@ -24,6 +25,7 @@ return [
     'item' => 'Producto',
     'price' => 'Precio',
     'qty' => 'Cantidad',
+    'dis' => 'Dis',
     'print' => 'Imprimir',
     'new_sale' => 'Nueva Venta',
 ];

@@ -18,8 +18,9 @@
     <thead>
         <tr>
             <td>{{trans('item.item_id')}}</td>
-            <td>{{trans('item.upc_ean_isbn')}}</td>
+            <td>{{trans('item.item_code')}}</td>
             <td>{{trans('item.item_name')}}</td>
+            <td>{{trans('item.description')}}</td>
             <td>{{trans('item.size')}}</td>
             <td>{{trans('item.cost_price')}}</td>
             <td>{{trans('item.selling_price')}}</td>
@@ -32,8 +33,9 @@
     @foreach($item as $value)
         <tr>
             <td>{{ $value->id }}</td>
-            <td>{{ $value->upc_ean_isbn }}</td>
+            <td>{{ $value->item_code }}</td>
             <td>{{ $value->item_name }}</td>
+            <td>{{ $value->description }}</td>
             <td>{{ $value->size }}</td>
             <td>{{ $value->cost_price }}</td>
             <td>{{ $value->selling_price }}</td>
